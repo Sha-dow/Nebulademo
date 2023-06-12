@@ -1,0 +1,31 @@
+{
+  "name": "nebulademo",
+  "version": "0.0.1",
+  "author": {
+    "name": "Hannu Ranta",
+    "email": "hannu.ranta.2@gmail.com"
+  },
+  "keywords": [
+    "qlik",
+    "nebula"
+  ],
+  "scripts": {
+    "start": "parcel src/index.html --open --no-hmr",
+    "build": "parcel build src/index.html --dist-dir ./dist"
+  },
+  "dependencies": {
+    "@nebula.js/sn-bar-chart": "^1.x",
+    "@nebula.js/stardust": "4.2.0",
+    "@qlik/sdk": "^0.12.0",
+    "chart.js": "^4.3.0",
+    "d3": "^7.8.5",
+    "enigma.js": "^2.6.3",
+    "parcel": "^2.7.0",
+    "picasso-plugin-q": "^2.2.3",
+    "picasso.js": "^2.2.3"
+  },
+  "devDependencies": {
+    "buffer": "^6.0.3",
+    "process": "^0.11.10"
+  }
+}

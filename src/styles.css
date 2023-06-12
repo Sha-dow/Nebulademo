@@ -1,0 +1,107 @@
+body {
+    background-image: url('stars.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    display: flex;
+    margin: 50px auto;
+    max-width: 1300px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .left-section {
+    width: 25%;
+    background-color: transparent;
+    padding: 20px;
+    color: black;
+  }
+  .right-section {
+    width: 75%;
+    background-color: transparent;
+    padding: 20px;
+    border-left: 2px dotted white;
+  }
+  h2 {
+    font-size: 16px;
+    color: black;
+    text-align: center;
+    padding-top: 15px;
+  }
+  table {
+    width: 100%;
+  }
+  th, td {
+    padding: 10px;
+  }
+  p {
+    font-size: 12px;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 0px;
+  }
+  input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  .button-container {
+    text-align: center;
+  }
+  button {
+    background-color: orange;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+  button:hover {
+    background-color: #FF7F00;
+  }
+
+  #preview-placeholder {
+    color: white;
+    font-size: 18px;
+    margin-top: 20px;
+    height: 900px;
+    width: 100%;
+    position: relative;
+    overflow-x: auto; 
+    overflow-y: hidden;
+  }
+  #preview-placeholder h2 {
+    margin-top: 0;
+  }
+
+  .preview-content {
+    margin-top: 20px;
+    position: relative;
+    overflow-x: auto; 
+    overflow-y: hidden;
+    width: 100%;
+    height: 800px;
+  }
+
+  ::-webkit-scrollbar {
+    height: 5px;              /* height of horizontal scrollbar ← You're missing this */
+    width: 5px;               /* width of vertical scrollbar */
+    border: 3px solid white;
+  }
+
+  /* Handle */
+::-webkit-scrollbar-thumb {
+  background: orange; 
+}
+
+
+  
