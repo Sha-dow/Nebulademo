@@ -1,107 +1,212 @@
-body {
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700);
+* {
+  box-sizing: border-box;
+}
+
+body 
+{
     background-image: url('stars.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-  }
-  .container {
-    display: flex;
-    margin: 50px auto;
-    max-width: 1300px;
-    background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  .left-section {
-    width: 25%;
-    background-color: transparent;
-    padding: 20px;
-    color: black;
-  }
-  .right-section {
-    width: 75%;
-    background-color: transparent;
-    padding: 20px;
-    border-left: 2px dotted white;
-  }
-  h2 {
-    font-size: 16px;
-    color: black;
-    text-align: center;
-    padding-top: 15px;
-  }
-  table {
-    width: 100%;
-  }
-  th, td {
-    padding: 10px;
-  }
-  p {
-    font-size: 12px;
-    font-family: 'Courier New', Courier, monospace;
-    color: black;
-    text-align: left;
-    padding-left: 20px;
-    padding-top: 0px;
-  }
-  input[type="number"] {
-    width: 60px;
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-  .button-container {
-    text-align: center;
-  }
-  button {
-    background-color: orange;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 10px;
-    border-radius: 5px;
-  }
-  button:hover {
-    background-color: #FF7F00;
-  }
+}
+.sections-nav {
+  max-width: 1300px;
+  margin: 20px auto;
+}
+.container-main {
+  display: flex;
+  margin: 20px auto;
+  max-width: 1300px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  overflow: hidden;
+  min-height: 800px;
+}
+.left-section {
+  width: 25%;
+  background-color: transparent;
+  padding: 20px;
+  color: black;
+}
+.right-section {
+  width: 75%;
+  background-color: transparent;
+  padding: 20px;
+  border-left: 2px dotted white;
+}
+h2 {
+  font-size: 16px;
+  color: black;
+  text-align: center;
+  padding-top: 15px;
+}
+table {
+  width: 100%;
+}
+th, td {
+  padding: 10px;
+}
+p {
+  font-size: 12px;
+  font-family: 'Courier New', Courier, monospace;
+  color: black;
+  text-align: left;
+  padding-left: 20px;
+  padding-top: 0px;
+}
+input[type="number"] {
+  width: 60px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.button-container {
+  text-align: center;
+}
+.button-main {
+  background-color: orange;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+.button-main:hover {
+  background-color: #FF7F00;
+}
 
-  #preview-placeholder {
-    color: white;
-    font-size: 18px;
-    margin-top: 20px;
-    height: 900px;
-    width: 100%;
-    position: relative;
-    overflow-x: auto; 
-    overflow-y: hidden;
-  }
-  #preview-placeholder h2 {
-    margin-top: 0;
-  }
+#preview-placeholder {
+  color: white;
+  font-size: 18px;
+  margin-top: 20px;
+  height: 900px;
+  width: 100%;
+  position: relative;
+  overflow-x: auto; 
+  overflow-y: hidden;
+}
+#preview-placeholder h2 {
+  margin-top: 0;
+}
 
-  .preview-content {
-    margin-top: 20px;
-    position: relative;
-    overflow-x: auto; 
-    overflow-y: hidden;
-    width: 100%;
-    height: 800px;
-  }
+.preview-content {
+  margin-top: 20px;
+  position: relative;
+  overflow-x: auto; 
+  overflow-y: hidden;
+  width: 100%;
+  height: 800px;
+}
 
-  ::-webkit-scrollbar {
-    height: 5px;              /* height of horizontal scrollbar ← You're missing this */
-    width: 5px;               /* width of vertical scrollbar */
-    border: 3px solid white;
-  }
+/* Advisor page styles */
+.left-column {
+  width: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+}
 
-  /* Handle */
+.right-column {
+  border-left: 2px dotted white;
+  width: 50%;
+  max-height: 800px;
+  padding: 20px;
+}
+
+::-webkit-scrollbar {
+  height: 5px;              /* height of horizontal scrollbar ← You're missing this */
+  width: 5px;               /* width of vertical scrollbar */
+  border: 3px solid white;
+}
+
+/* Handle */
 ::-webkit-scrollbar-thumb {
   background: orange; 
 }
 
+/*Chat elements */
+.chat-output {
+  padding: 10px;
+  height: 700px;
+  max-height: 700px;
+  overflow: auto;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+.chat-output div {
+  margin: 0 0 20px 0;
+}
+.chat-output .user-message .message {
+  background: orange;
+  color: white;
+}
+.chat-output .bot-message {
+  text-align: right;
+}
+.chat-output .bot-message .message {
+  background: #eee;
+}
+.chat-output .message {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 10px;
+}
 
-  
+.chat-input .user-input {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 8px;
+}
+
+.nebula-chart {
+  width: 400px;
+  height: 400px;
+  background-color: rgba(255, 255, 255);
+  border-radius: 10px;
+}
+
+.form-class {
+  margin-left: 4px;
+  height: 34px;
+  width: 32%;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+}
+
+.chart-toolbar {
+  width: 100%;
+  height: 40px;
+  background-color: white;
+  margin-top: 20px;
+}
+
+.preview-chart-prim, .preview-chart-sec {
+  width: 100%;
+  height: 350px;
+  border-radius: 10px;
+  background-color: white;
+  margin-top: 20px;
+}
+
+.chart-view {
+  width: 100%;
+}

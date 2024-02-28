@@ -10,22 +10,37 @@
     "nebula"
   ],
   "scripts": {
-    "start": "parcel src/index.html --open --no-hmr",
-    "build": "parcel build src/index.html --dist-dir ./dist"
+    "start": "parcel src/*.html --open --no-hmr",
+    "build": "parcel build src/*.html --dist-dir ./dist"
   },
   "dependencies": {
     "@nebula.js/sn-bar-chart": "^1.x",
-    "@nebula.js/stardust": "4.2.0",
+    "@nebula.js/sn-line-chart": "^1.30.10",
+    "@nebula.js/sn-scatter-plot": "^3.54.0",
+    "@nebula.js/stardust": "^4.2.0",
     "@qlik/sdk": "^0.12.0",
     "chart.js": "^4.3.0",
     "d3": "^7.8.5",
+    "dotenv": "^16.4.1",
     "enigma.js": "^2.6.3",
+    "node-fetch": "^3.3.2",
     "parcel": "^2.7.0",
     "picasso-plugin-q": "^2.2.3",
-    "picasso.js": "^2.2.3"
+    "picasso.js": "^2.2.3",
+    "prettier": "^3.2.4"
   },
   "devDependencies": {
+    "@types/node": "^20.11.16",
+    "assert": "^2.1.0",
+    "browserify-zlib": "^0.2.0",
     "buffer": "^6.0.3",
-    "process": "^0.11.10"
+    "events": "^3.3.0",
+    "https-browserify": "^1.0.0",
+    "path-browserify": "^1.0.1",
+    "process": "^0.11.10",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.2.0",
+    "url": "^0.11.3",
+    "util": "^0.12.5"
   }
 }

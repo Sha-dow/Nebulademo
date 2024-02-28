@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <script src="./advisor.js" type="module"></script>
+  <script src="./chartgen.js" type="module"></script>
+  
+  <script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+      document.getElementById("openChat").style.display = "none";
+    }
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+      document.getElementById("openChat").style.display = "block";
+    }
+    function eraseText() {
+      document.getElementById("user-input").value = "";
+    }
+  </script>
+
+  <title>Chart Generation and Chat</title>
+
+</head>
+<body>
+  <div class="sections-nav">
+    <button class="button-main" onclick="window.location.href='./index.html';">Nebula Demo</button>
+    <button class="button-main" onclick="window.location.href='./advisor.html';">Insight Advisor Demo</button>
+  </div>
+  <div class="container-main">
+    <div class="left-column">
+        
+        <div class="chart-toolbar">
+        </div>
+
+        <div class="chart-view">
+            <div id="preview-chart-prim" class="preview-chart-prim"></div>
+        </div>
+
+        <div class="chart-view">
+            <div id="preview-chart-sec" class="preview-chart-sec"></div>
+        </div>
+
+    </div>
+
+    <div class="right-column">
+        <div class="chat-popup" id="myForm">
+          
+            <div class="chat-output" id="chat-output">
+                <div class="user-message">
+                <div class="message">Hello, I'm Qlik Bot. Great to see you!</div>
+                </div>
+            </div>
+            <div class="chat-input">
+                <form action="#0" id="user-input-form" autocomplete="off">
+                <input type="text" id="user-input" class="user-input" placeholder="What's on your mind?">
+                </form>
+            </div>
+         
+        </div>
+    </div>
+  </div>
+</body>
+</html>
